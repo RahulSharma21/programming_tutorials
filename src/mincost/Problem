@@ -1,0 +1,25 @@
+Given calories, quantities and quantities of three fruits apple, banana and oranges. Find out what is the minimum possible cost
+to achieve a target energy (given in input)
+
+Input
+
+Energy of each fruit (3 values)
+Number of each fruit (3 values)
+Cost of each fruit (3 values)
+Target energy
+
+
+Output
+Minimum possible cost to achieve a target energy 
+
+
+Example Input
+
+5 3 2
+5 5 5 
+100 20 10
+15
+
+Example Output
+
+90
