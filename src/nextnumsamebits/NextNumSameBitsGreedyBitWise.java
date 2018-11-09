@@ -2,13 +2,14 @@ package nextnumsamebits;
 
 import java.util.Scanner;
 
+// WARNING : This program is still work in progress and failing for some test cases 
 public class NextNumSameBitsGreedyBitWise {
 
 	public static long getNextNumSameBits(long num) {
 
 		long mask = 1;
 
-		int minOneIndex = -1, minZeroIndex = -1;
+		int minOneIndex = -1, maxOneIndex = -1, minZeroIndex = -1;
 
 		int oneBitsCount = 0, zeroBitsCount = 0;
 
@@ -27,15 +28,17 @@ public class NextNumSameBitsGreedyBitWise {
 				// find the index of right most 1
 				if (minOneIndex == -1)
 					minOneIndex = idx;
+		
+				// find the index of left most 1
+				maxOneIndex = idx;
 
 			} else {
 
 				// stores the count of 0 bits in the input number
 				zeroBitsCount++;
 
-				// find the index of right most 0
-				if (minZeroIndex == -1)
-					minZeroIndex = idx;
+				// find the index of left most 0 
+				minZeroIndex = idx;
 			}
 
 			idx++;
@@ -46,7 +49,7 @@ public class NextNumSameBitsGreedyBitWise {
 		int totalBitsCount = oneBitsCount + zeroBitsCount;
 
 		// if the input number contains 01
-		if (minZeroIndex > minOneIndex) {
+		if ((minZeroIndex > minOneIndex) && (minZeroIndex < maxOneIndex) ){
 
 			// copy of all bits of input number till right most 01
 			for (int i = minZeroIndex + 1; i < totalBitsCount; i++) {
