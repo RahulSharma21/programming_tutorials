@@ -7,15 +7,21 @@ Output
 Next number greater than input number and having same number of 1 bits
 
 Example input
+0
+1
+2
+8
 5
-
-Example output 
 6
+22
+156
 
-Example input
+Example output
+
+2
+4
+16
 6
-
-Example output 
 9
-
-
+25
+163
