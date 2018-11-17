@@ -2,8 +2,6 @@ package nextnumsamebits;
 
 import java.util.Scanner;
 
-import org.apache.commons.lang3.StringUtils;
-
 public class NextNumSameBitsBruteForce {
 
 	public static long getNextNumSameBits(long num) {
